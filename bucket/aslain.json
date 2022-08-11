@@ -1,0 +1,24 @@
+{
+    "version": "1.17.1.2_01",
+    "license": "Unlicense",
+    "description": "Modpak from Aslain to World of Tanks",
+    "url": "https://flcl.uk/public/Aslains_WoT_Modpack_Installer_v.1.17.1.2_01.exe",
+    "hash": "10059d49a375559155a83d518f8d43c950e7466ac2a5033853fa5e7c076263b5",
+    "installer": {
+        "script": "Start-Process -FilePath $dir\\$fname -Wait"
+    },
+    "homepage": "https://aslain.com/index.php?/topic/13-aslains-wot-modpack/",
+    "checkver": {
+        "url": "https://pastebin.com/raw/9f0pvEAQ",
+        "jsonpath": "$.installer.version",
+        "regex": "(?<mainVersion>[\\d.]+).(?<buildVersion>\\d\\d)",
+        "replace": "${mainVersion}_${buildVersion}"
+    },
+    "autoupdate": {
+        "url": "https://flcl.uk/public/Aslains_WoT_Modpack_Installer_v.$version.exe",
+        "hash": {
+            "url": "https://aslain.com/index.php?/topic/13-aslains-wot-modpack/",
+            "find": "\\(link\\s+#\\d-2\\)\\s+([a-fA-F0-9]{64})"
+        }
+    }
+}
