@@ -1,9 +1,9 @@
 {
-    "version": "1.19.0.0_01",
+    "version": "1.19.0.0_02",
     "license": "Unlicense",
     "description": "Modpak from Aslain to World of Tanks",
-    "url": "https://flcl.uk/public/Aslains_WoT_Modpack_Installer_v.1.19.0.0_01.exe",
-    "hash": "bd0aeedf2094969d09b8183df2df8ac7cd49f4ef509a3861e813c483e79bd47e",
+    "url": "https://flcl.uk/public/Aslains_WoT_Modpack_Installer_v.1.19.0.0_02.exe",
+    "hash": "f20240bd8171387905d8e48b8b7279662675a43d7eac136c158d80392ab26eed",
     "installer": {
         "script": "Start-Process -FilePath $dir\\$fname -Wait"
     },
